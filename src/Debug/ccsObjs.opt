@@ -1,0 +1,1 @@
+"./BSL430_API.obj" "./BSL430_Command_Interpreter.obj" "./BSL430_Low_Level_Init.obj" "./BSL430_PI_USCIA.obj" "../lnk_msp430f5529.cmd" -l"libmath.a" -l"libc.a" 
