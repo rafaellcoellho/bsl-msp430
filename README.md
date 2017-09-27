@@ -27,14 +27,18 @@ I do not know exactly if a previous or later version of CCS will present problem
 I left links to get my CCS and scripter versions. And a texas tutorial on how to download other versions of the TI compiler inside the CCS.
 
 CCS versions: http://processors.wiki.ti.com/index.php/Download_CCS <Last accessed 9/27/2017>
+
 Scripter: http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSPBSL_Scripter/latest/index_FDS.html  <Last accessed 9/27/2017>
+
 TI compiler tutorial: http://processors.wiki.ti.com/index.php/Compiler_Releases <Last accessed 9/27/2017>
 
 ### Using in CSS with MSP-FET
 
 After certifying that everything is as I listed above, we will use the CCS. Doing this is a very basic thing, but I think it needs to be explained right and you need to be aware if everything is correct. First go to File-> Import...
 
-![001]("https://github.com/rafaellcoellho/bsl-msp430/tree/master/doc/img/001.png")
+<p align="center">
+  <img src="https://github.com/rafaellcoellho/bsl-msp430/tree/master/doc/img/001.png" width="350"/>
+</p>
 
 In the Code Composer Studio tab select CCS projects
 
