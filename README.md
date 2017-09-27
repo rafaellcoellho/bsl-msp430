@@ -1,6 +1,12 @@
 # UART BSL of MSP430F5529
 
-This repository contains everything necessary to burn a program in a MSP430F5529 through uart using the BSL (Bootstrap Loader). My intention with BSL was that I could get a command through an UCA0 from msp, and turn on the "firmware upgrade" function. Upon entering this mode, the same UCA0 would receive the new firmware, update and restart the controller. So it would be possible to put my project in the field, and with each bug found, be able to correct it effectively.
+This repository contains everything necessary to  loading a program in a MSP430F5529 flash memory through uart using the BSL (Bootstrap Loader). My intention with BSL was that I could get a command through an UCA0 from MSP, and turn on the "firmware upgrade" function. Upon entering this mode, the same UCA0 would receive the new firmware, update and restart the controller. So it would be possible to put my project in the field, and with each bug found, be able to correct it effectively.
+
+The biggest incentive to make this repository was the time I spent looking for a clear tutorial to start understanding BSL. I believe that if someone who is researching the subject follow the instructions here, have a starting point to make their own changes.
+
+Most of the codes and documentation that texas provides are dated to 2013. When I went to use with the most up-to-date versions of the compiler in CCS v6 many problems appeared. When I was able to compile the codes without errors, I was not able to find which part of my code was not working right.
+
+In the end, I was continue when I found the wiki on the subject. But even so the example that was there used old versions of the standard code. I decided to update that example with the latest versions, and test on MSP430F5529 and post here.
 
 ## Getting Started
 
@@ -13,7 +19,7 @@ All I did was just get several parts of the codes contained in these links and m
 
 ### Prerequisites
 
-Here is all the pertinent information to be able to burn this code in an msp430f5529 that I also used.
+Here is all the pertinent information to be able to burn this code in an MSP430f5529 that I also used.
 
 ```
 IDE: Code Composer Studio v6.1.1.00022
@@ -22,7 +28,7 @@ BSL Scripter: MSPBSL_Scripter  v3.2.1
 SO: Windowns 7 Ultimate 64 bits
 ```
 
-I do not know exactly if a previous or later version of CCS will present problems, but if any appears, download the same version as mine and it will practically be solved. Unlike the IDE, the compiler version and the script are important that are the ones I'm using, as they are the ones that work, I do not guarantee that later or previous versions will work as expected.
+I do not know exactly if a previous or later version of CCS will present problems, but if any appears, download the same version as mine. Unlike the IDE, the compiler version and the script are important that are the ones I'm using, as they are the ones that work, I do not guarantee that later or previous versions will work as expected.
 
 I left links to get my CCS and scripter versions. And a texas tutorial on how to download other versions of the TI compiler inside the CCS.
 
@@ -78,7 +84,7 @@ In the examples folder you can find all the information you need to test whether
 
 I used a PL2303 USB to UART to test. Any such chip that converts USB to serial works. (http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=225&pcid=41)
 
-First look at the schematic contained in the sch folder, and after mounting the hardware correctly open the windonws prompt and navigate to the bsl-msp430\examples\usb_to_serial\script folder. Open the script.txt and change the COM number. There simply call the command line:
+First look at the schematic contained in the sch folder, and after mounting the hardware correctly open the windows prompt and navigate to the bsl-msp430\examples\usb_to_serial\script folder. Open the script.txt and change the COM number. There, simply call the command line:
 
 ```
 BSL_Scripter.exe script.txt
@@ -131,11 +137,11 @@ RX_DATA_BLOCK BOR.txt
 ```
 Now it is necessary to look if the LED previously connected is blinking. After all this, you are able to upload any firmware in txt format. How to generate this kind of file for your firmware in the CCS or IAR Workbench to be able to burn through this method? Read the documentation provided on the texas instruments website or in the folder in that repository called docs.
 
-I hope you get the same result as me: D.
+I hope you get the same result as me :D.
 
-After testing like this, you'll need to test how to call BSL burn mode within an actual application. Inside the proj folder you have a project that you can import into CCS and sending the strings through the same upload uart as "RUN BSL\r" will put in the same state, and then the process of running the script is the same.
+After testing like this, you'll need to test how to call BSL load mode within an actual application. Inside the proj folder you have a project that you can import into CCS and sending the strings through the same upload uart as "RUN BSL\r" will put in the same state, and then the process of running the script is the same.
 
-This code is not complicated, I recommend you read it well, and understand exactly how it works. You can adapt a function to call BSL in your own application easily.
+This code is not complicated I recommend you read it well and understand exactly how it works. You can adapt a function to call BSL in your own application easily.
 
 ## Contributing
 
