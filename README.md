@@ -26,39 +26,49 @@ I do not know exactly if a previous or later version of CCS will present problem
 
 I left links to get my CCS and scripter versions. And a texas tutorial on how to download other versions of the TI compiler inside the CCS.
 
-CCS versions: http://processors.wiki.ti.com/index.php/Download_CCS <Last accessed 9/27/2017>
+* CCS versions: http://processors.wiki.ti.com/index.php/Download_CCS <Last accessed 9/27/2017>
 
-Scripter: http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSPBSL_Scripter/latest/index_FDS.html  <Last accessed 9/27/2017>
+* Scripter: http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSPBSL_Scripter/latest/index_FDS.html  <Last accessed 9/27/2017>
 
-TI compiler tutorial: http://processors.wiki.ti.com/index.php/Compiler_Releases <Last accessed 9/27/2017>
+* TI compiler tutorial: http://processors.wiki.ti.com/index.php/Compiler_Releases <Last accessed 9/27/2017>
 
 ### Using in CSS with MSP-FET
 
 After certifying that everything is as I listed above, we will use the CCS. Doing this is a very basic thing, but I think it needs to be explained right and you need to be aware if everything is correct. First go to File-> Import...
 
 <p align="center">
-  <img src="https://github.com/rafaellcoellho/bsl-msp430/tree/master/doc/img/001.png" width="350"/>
+  <a href="https://imgur.com/Hgj2ubR"><img src="https://i.imgur.com/Hgj2ubR.png" title="001" /></a>
 </p>
 
 In the Code Composer Studio tab select CCS projects
 
-![002]("https://github.com/rafaellcoellho/bsl-msp430/tree/master/doc/img/002.png")
+<p align="center">
+  <a href="https://imgur.com/zPXYgMo"><img src="https://i.imgur.com/zPXYgMo.png" title="002" /></a>
+</p>
 
 Click browse, point to the src folder inside the cloned repository on your machine. The project will appear under the name of MSP430F5529_BSL. Click finish.
 
-![003]("https://github.com/rafaellcoellho/bsl-msp430/tree/master/doc/img/003.png")
+<p align="center">
+  <a href="https://imgur.com/N8a8iJq"><img src="https://i.imgur.com/N8a8iJq.png" title="003" /></a>
+</p>
 
 This project will appear in project explorer. Right-click on this and go to properties.
 
-![004]("https://github.com/rafaellcoellho/bsl-msp430/tree/master/doc/img/004.png")
+<p align="center">
+  <a href="https://imgur.com/kYyxQiK"><img src="https://i.imgur.com/kYyxQiK.png" title="004" /></a>
+</p>
 
 This part is important. If the "Compiler Version" field is not TI v4.1.9, back and read the link to download older versions of the compiler. Make sure the rest is the same and now go to Build-> MSP430 Linker.
 
-![005]("https://github.com/rafaellcoellho/bsl-msp430/tree/master/doc/img/005.png")
+<p align="center">
+  <a href="https://imgur.com/Vc9JOTY"><img src="https://i.imgur.com/Vc9JOTY.png" title="005" /></a>
+</p>
 
 Go to "MSP430 Properties" and check if the "Allow Read/Write/Erase access to BSL memory" box is checked. And if "Erase main, information and protected information memory in Erase Options" is checked. If all is correct, click Apply and then OK.
 
-![006]("https://github.com/rafaellcoellho/bsl-msp430/tree/master/doc/img/006.png")
+<p align="center">
+  <a href="https://imgur.com/34MTcJv"><img src="https://i.imgur.com/34MTcJv.png" title="006" /></a>
+</p>
 
 Finally, go to Project-> Build Project and wait. When finished, this indicated line displayed in the photo will be with warning. As far as I've used this code, it does not affect how it works. If someone has problems and/or find out how to resolve this warning correctly, please contact me.
 
