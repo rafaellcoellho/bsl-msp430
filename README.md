@@ -1,13 +1,13 @@
 # UART BSL of MSP430F5529
 
-This repository contains everything necessary to burn a program in a msp4305529 through uart using the BSL (Bootstrap Loader). My intention with BSL was that I could get a command through an UCA0 from msp, and turn on the "firmware upgrade" function. Upon entering this mode, the same UCA0 would receive the new firmware, update and restart the controller. So it would be possible to put my project in the field, and with each bug found, be able to correct it effectively.
+This repository contains everything necessary to burn a program in a MSP430F5529 through uart using the BSL (Bootstrap Loader). My intention with BSL was that I could get a command through an UCA0 from msp, and turn on the "firmware upgrade" function. Upon entering this mode, the same UCA0 would receive the new firmware, update and restart the controller. So it would be possible to put my project in the field, and with each bug found, be able to correct it effectively.
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for aplication purposes. All code in this project can be found in these two links:
 
-http://www.ti.com/tool/mspbsl (In the session custom-bsl430) <Last accessed 9/27/2017>
-http://processors.wiki.ti.com/index.php/Custom_MSP430_BSL <Last accessed 9/27/2017>
+* http://www.ti.com/tool/mspbsl (In the session custom-bsl430) <Last accessed 9/27/2017>
+* http://processors.wiki.ti.com/index.php/Custom_MSP430_BSL <Last accessed 9/27/2017>
 
 All I did was just get several parts of the codes contained in these links and make it work the right way. 
 
@@ -43,7 +43,7 @@ After certifying that everything is as I listed above, we will use the CCS. Doin
 In the Code Composer Studio tab select CCS projects
 
 <p align="center">
-  <a href="https://imgur.com/zPXYgMo"><img src="https://i.imgur.com/zPXYgMo.png" title="002" /></a>
+  <a href="https://imgur.com/wh52dq6"><img src="https://i.imgur.com/wh52dq6.png" title="002" /></a>
 </p>
 
 Click browse, point to the src folder inside the cloned repository on your machine. The project will appear under the name of MSP430F5529_BSL. Click finish.
@@ -143,7 +143,7 @@ If you think this is worth improving in any way, either with this README.md or a
 
 ## Author
 
-* **Rafael Coelho Silva** - *Initial work* - [rafaellcoellho](https://github.com/rafaellcoellho)
+* **Rafael Coelho Silva** - [rafaellcoellho](https://github.com/rafaellcoellho)
 
 My personal e-mail: rafaellcoellho@gmail.com
 
